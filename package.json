@@ -1,0 +1,22 @@
+{
+	"name": "dashboard",
+	"type": "module",
+	"scripts": {
+		"dev": "vinxi dev",
+		"build": "vinxi build",
+		"start": "vinxi start",
+		"wrangler": " wrangler dev",
+		"lint": "bunx @biomejs/biome format --write . && bunx @biomejs/biome lint --apply ."
+	},
+	"dependencies": {
+		"@cloudflare/workers-types": "^4.20240529.0",
+		"@solidjs/start": "^1.0.1",
+		"solid-js": "^1.8.17",
+		"typescript": "^5.3.3",
+		"vinxi": "^0.3.11",
+		"wrangler": "^3.57.1"
+	},
+	"engines": {
+		"node": ">=18"
+	}
+}

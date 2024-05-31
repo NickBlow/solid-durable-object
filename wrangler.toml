@@ -1,0 +1,21 @@
+name = "playground"
+main = "./.output/server/index.mjs"
+workers_dev = true
+compatibility_date = "2024-05-31"
+compatibility_flags = ["nodejs_compat"]
+
+rules = [
+    { type = "ESModule", globs = ["**/*.js", "**/*.mjs"]},
+]
+
+[site]
+bucket = ".output/public"
+
+[[durable_objects.bindings]]
+name = "DURABLE_SOLID"
+class_name = "DurableSolid"
+
+[[migrations]]
+tag = "v1" # Should be unique for each entry
+new_classes = ["DurableSolid"]
+
